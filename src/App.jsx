@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "./Home";
-import Contact from "./Contact";
 import About from "./About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Component/Header";
@@ -9,6 +8,8 @@ import Services from "./Services";
 import { ThemeProvider } from "styled-components";
 import { tab } from "@testing-library/user-event/dist/tab";
 import { GLobalSyle } from "./GlobalStyle";
+import Contact from "./Contact.jsx";
+import Error from "./Error.jsx";
 
 const App = () => {
     const theme = {
@@ -40,8 +41,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
                     <Route path="/service" element={<Services />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="*" element={<Error />} />
+
                 </Routes>
                 <Footer />
             </BrowserRouter>

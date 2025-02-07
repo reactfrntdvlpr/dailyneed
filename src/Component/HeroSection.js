@@ -2,15 +2,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../Style/Button";
+import { useGLobalContext } from "../Context";
 
-const HeroSection = ({image, name}) => {
+const HeroSection = () => {
+    const{ name, image } = useGLobalContext();
+
     return (
         <Wrapper>
             <div className="container grid grid-two-column">
                 <div className="section-hero-data">
                     <p className="hero-top-data">THIS IS ME</p>
                     <h1 className="hero-heading">{name}</h1>
-                    <p className="hero-para">I am Tauseef Ur Rahman Front End Developer at ASDRC also Learning React.js from YouTube Channel.</p>
+                    <p className="hero-para">I am {name} Front End Developer at ASDRC also Learning React.js from YouTube Channel.</p>
                     <Button className="btn hireme-btn">
                         <NavLink to="/contact">Hire Me</NavLink>
                     </Button>
