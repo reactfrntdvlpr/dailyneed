@@ -54,3 +54,22 @@ const App = () => {
 }
 
 export default App;
+
+
+// var prm = new Promise((resolve, reject) => {
+//     var n = Math.floor(Math.random() * 10)
+
+//     if(n<5){
+//         return resolve();
+//     }
+//     else{
+//         return reject();
+//     }
+// })
+
+// prm.then(function(){
+//     console.log("resolve hogya task")
+// })
+// .catch(function(){
+//     console.log("reject hogaya")
+// })
