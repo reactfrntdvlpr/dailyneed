@@ -3,6 +3,7 @@ import HeroSection from "./Component/HeroSection";
 import { useGLobalContext } from "./Context";
 import Services from "./Services";
 import Contact from "./Contact";
+import About from "./About";
 
 const Home = () => {
     // const data = {
@@ -20,7 +21,7 @@ const Home = () => {
             <HeroSection />
             <Services />
             <Contact />
-
+            <About />
         </>
 
 
